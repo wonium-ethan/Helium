@@ -1,0 +1,11 @@
+*.iml
+.gradle
+/.idea/
+/build
+/app/build/
+/app/src/androidTest/
+/app/src/test/
+/android-widget-extensions/build/
+/android-widget-extensions/src/androidTest/
+/android-widget-extensions/src/test/
+local.properties

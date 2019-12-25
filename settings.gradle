@@ -1,0 +1,2 @@
+include ':app', ':android-widget-extensions'
+rootProject.name='AndroidExtensions'

@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.wonium.notice"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "0.0.1"
+        multiDexEnabled true
+        setProperty('archivesBaseName', "$applicationId-official-$versionName-$versionCode-" + (new Date()).format('yyyyMMdd'))
+        kapt.arguments { arg("AROUTER_MODULE_NAME", project.getName()) }
+
+    }
+    signingConfigs {
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+            storeFile file("/keystore/release.jks")
+            storePassword "ethan0000"
+            keyAlias "release"
+            keyPassword "ethan0000"
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+            storeFile file("/keystore/release.jks")
+            storePassword "ethan0000"
+            keyAlias "release"
+            keyPassword "ethan0000"
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debugProguard {
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-rules-debug.pro'
+            signingConfig signingConfigs.debug
+        }
+        debugProguardLog {
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-log.pro'
+            signingConfig signingConfigs.debug
+            versionNameSuffix = kotlin_version
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-log.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.github.sollyu:kotlin-extension-android:1.0.1'
+    implementation project(path: ':android-widget-extensions')
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}

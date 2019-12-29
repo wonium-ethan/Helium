@@ -1,4 +1,4 @@
-package com.wonium.android.widget
+package com.helium.android
 
 import android.content.Context
 import android.os.Handler
@@ -6,7 +6,6 @@ import android.view.*
 import android.widget.PopupWindow
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
-import com.wonium.android.R
 import kotlinx.android.synthetic.main.layout_notice_view.view.*
 
 /**
@@ -21,50 +20,38 @@ import kotlinx.android.synthetic.main.layout_notice_view.view.*
  * @UpdateDescription: 更新说明
  * @Version: 1.0.0
  */
-class NoticeView(private val builder: Builder) : PopupWindow.OnDismissListener {
+class NoticeView(private val builder: Builder) {
 
-
-    private lateinit var mPopupWindow: PopupWindow
-    private lateinit var onDismissListener: PopupWindow.OnDismissListener
-
+    private var mPopupWindow: PopupWindow
 
     init {
-        val layoutNoticeView =
-            LayoutInflater.from(builder.context).inflate(R.layout.layout_notice_view, null)
+        val layoutNoticeView = LayoutInflater.from(builder.context).inflate(R.layout.layout_notice_view, null)
         layoutNoticeView.labelNoticeView.text = builder.notice
         val activity: AppCompatActivity = layoutNoticeView.context as AppCompatActivity
         val mWindow = activity.window
         val params: WindowManager.LayoutParams = mWindow.attributes
         mWindow.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
         mWindow.attributes = params
-        mPopupWindow = PopupWindow(
-            layoutNoticeView,
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
+        mPopupWindow = PopupWindow(layoutNoticeView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         mPopupWindow.animationStyle = builder.animationStyle
-        onDismissListener = this
-        mPopupWindow.setOnDismissListener(onDismissListener)
         mPopupWindow.contentView.setBackgroundResource(builder.resId)
 
     }
 
     fun showAsDropDown(anchor: View) {
         mPopupWindow.showAsDropDown(anchor)
-        onDismissListener.onDismiss()
+        onDismissView()
     }
 
     fun showAtLocation(parent: View, gravity: Int, x: Int, y: Int) {
         mPopupWindow.showAtLocation(parent, Gravity.TOP, x, y)
-        onDismissListener.onDismiss()
-
+        onDismissView()
     }
 
-
-    override fun onDismiss() {
-
+    private fun onDismissView() {
         Handler().postDelayed({ mPopupWindow.dismiss() }, builder.delayed)
     }
+
 
     class Builder(val context: Context) {
         internal var notice: String? = null
@@ -96,7 +83,8 @@ class NoticeView(private val builder: Builder) : PopupWindow.OnDismissListener {
             return this
         }
 
-        fun create(): NoticeView = NoticeView(this)
+        fun create(): NoticeView =
+            NoticeView(this)
     }
 
 

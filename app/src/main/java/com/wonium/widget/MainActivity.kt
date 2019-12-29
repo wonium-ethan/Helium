@@ -3,7 +3,7 @@ package com.wonium.widget
 import android.os.Bundle
 import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
-import com.wonium.android.widget.NoticeView
+import com.helium.android.NoticeView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

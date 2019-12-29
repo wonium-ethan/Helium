@@ -83,7 +83,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.github.sollyu:kotlin-extension-android:1.0.1'
-    implementation project(path: ':android-widget-extensions')
+    implementation project(path: ':helium-android')
 }
 
 repositories {

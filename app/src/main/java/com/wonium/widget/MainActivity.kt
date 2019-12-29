@@ -14,24 +14,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         button.setOnClickListener { showNoticeView() }
         button2.setOnClickListener { showAtLocation() }
-        button3.setOnClickListener {
-            startActivity(
-                Intent(
-                    baseContext,
-                    ItemViewActivity::class.java
-                )
-            )
-        }
+        button3.setOnClickListener { startActivity(Intent(baseContext, ItemViewActivity::class.java)) }
+        button4.setOnClickListener { startActivity(Intent(baseContext, SlidingButtonActivity::class.java)) }
     }
 
     private fun showNoticeView() {
-        NoticeView.Builder(this).setNotice("跳过图片题").create()
-            .showAsDropDown(button)
+        NoticeView.Builder(this).setNotice("跳过图片题").create().showAsDropDown(button)
     }
 
     private fun showAtLocation() {
-        NoticeView.Builder(this).setNotice("显示在状态栏下方").setDismissDelayed(5000).create()
-            .showAtLocation(this.window.decorView, Gravity.TOP, 0, 100)
+        NoticeView.Builder(this).setNotice("显示在状态栏下方").setDismissDelayed(5000).create().showAtLocation(this.window.decorView, Gravity.TOP, 0, 100)
     }
 
 

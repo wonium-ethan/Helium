@@ -83,8 +83,7 @@ class NoticeView(private val builder: Builder) {
             return this
         }
 
-        fun create(): NoticeView =
-            NoticeView(this)
+        fun create(): NoticeView = NoticeView(this)
     }
 
 

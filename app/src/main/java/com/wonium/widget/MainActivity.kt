@@ -1,5 +1,6 @@
 package com.wonium.widget
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         button.setOnClickListener { showNoticeView() }
         button2.setOnClickListener { showAtLocation() }
+        button3.setOnClickListener {
+            startActivity(
+                Intent(
+                    baseContext,
+                    ItemViewActivity::class.java
+                )
+            )
+        }
     }
 
     private fun showNoticeView() {

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import com.helium.android.NoticeView
+import com.wonium.widget.ui.activity.ColorFulLineActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener { showAtLocation() }
         button3.setOnClickListener { startActivity(Intent(baseContext, ItemViewActivity::class.java)) }
         button4.setOnClickListener { startActivity(Intent(baseContext, SlidingButtonActivity::class.java)) }
+        btnColorFulLine.setOnClickListener { startActivity(Intent(baseContext,ColorFulLineActivity::class.java)) }
     }
 
     private fun showNoticeView() {

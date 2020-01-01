@@ -1,6 +1,7 @@
 package com.wonium.widget.helper
 
 import android.content.Context
+import android.net.ConnectivityManager
 import android.util.DisplayMetrics
 import android.view.WindowManager
 
@@ -24,3 +25,4 @@ import android.view.WindowManager
     wm.defaultDisplay.getMetrics(outMetrics)
     return  outMetrics.widthPixels
 }
+

@@ -28,5 +28,4 @@ class MainActivity : AppCompatActivity() {
         NoticeView.Builder(this).setNotice("显示在状态栏下方").setDismissDelayed(5000).create().showAtLocation(this.window.decorView, Gravity.TOP, 0, 100)
     }
 
-
 }

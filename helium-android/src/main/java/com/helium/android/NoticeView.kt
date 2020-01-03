@@ -44,7 +44,7 @@ class NoticeView(private val builder: Builder) {
     }
 
     fun showAtLocation(parent: View, gravity: Int, x: Int, y: Int) {
-        mPopupWindow.showAtLocation(parent, Gravity.TOP, x, y)
+        mPopupWindow.showAtLocation(parent, gravity, x, y)
         onDismissView()
     }
 

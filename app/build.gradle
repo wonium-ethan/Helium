@@ -2,19 +2,19 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
+def qmui_arch_version = '2.0.0-alpha02'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.wonium.notice"
+        applicationId "com.wonium.widget"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "0.0.1"
         multiDexEnabled true
         setProperty('archivesBaseName', "$applicationId-official-$versionName-$versionCode-" + (new Date()).format('yyyyMMdd'))
-        kapt.arguments { arg("AROUTER_MODULE_NAME", project.getName()) }
+//        kapt.arguments { arg("AROUTER_MODULE_NAME", project.getName()) }
 
     }
     signingConfigs {
@@ -83,7 +83,12 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.github.sollyu:kotlin-extension-android:1.0.1'
-    implementation project(path: ':android-widget-extensions')
+    implementation project(path: ':helium-android')
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "com.qmuiteam:qmui:$qmui_arch_version"
+    implementation "com.qmuiteam:arch:$qmui_arch_version"
+    kapt "com.qmuiteam:arch-compiler:$qmui_arch_version"
+
 }
 
 repositories {

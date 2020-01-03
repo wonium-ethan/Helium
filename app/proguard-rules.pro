@@ -48,3 +48,8 @@
 ##########################################################################################################
 -keep class com.baidu.** {*;}
 -keep class mapsdkvi.com.** {*;}
+
+##########################################################################################################
+-keep class **_FragmentFinder { *; }
+-keep class com.qmuiteam.qmui.arch.record.** { *; }
+-keep class androidx.fragment.app.* { *; }

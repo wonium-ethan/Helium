@@ -1,2 +1,2 @@
-include ':app', ':android-widget-extensions'
-rootProject.name='AndroidExtensions'
+include ':app', ':helium-android'
+rootProject.name='Helium'

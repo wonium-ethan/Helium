@@ -1,30 +1,42 @@
+# kotlin-extension-android
 
-#### 介绍
-{**以下是Helium扩展库的介绍**
-Helium是基于kotlin语言整理的组件，工具等代码库。目的是为了实现快速开发而生。
+## 说明
 
-
-#### 软件架构
-本项目主要基于Kotlin语言，部分组件Java开发。
-本项目主要分工具库，组件两大类
+Helium是一个主要基于Kotlin的扩展库，主要分两部分：扩展函数、自定义组件集合。
 
 
+## 使用
 
+添加jitpack到您的仓库配置中。
+```
+repositories {
+	maven { url 'https://jitpack.io' }
+}
+```
 
-#### 使用说明
+添加依赖，替换下面`last-version`位最新的版本，当前最新的版本:[![](https://jitpack.io/v/wonium-ethan/Helium.svg)](https://jitpack.io/#wonium-ethan/Helium)
 
-1.  添加依赖到你的根Build.gradle仓库
-	allprojects {
-		repositories {
-			maven { url 'https://jitpack.io' }
-		}
-	}
-2.  添加依赖项 当前最新版本为：[！[]（https://jitpack.io/v/wonium-ethan/Helium.svg）]（https://jitpack.io/#wonium-ethan/Helium）
-
+```
 dependencies {
-	        implementation 'com.github.wonium-ethan:Helium:0.0.1'
-	}
 
+	implementation 'com.github.wonium-ethan:Helium:last-version'
+}
+```
 
+## LICENSE
 
+```text
+Copyright 2018-2019 Sollyu, Wonium
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

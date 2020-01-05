@@ -1,81 +1,42 @@
+# kotlin-extension-android
 
-#### 介绍
-{**以下是Helium扩展库的介绍**
-Helium是基于kotlin语言整理的组件，工具等代码库。目的是为了实现快速开发而生。
+## 说明
 
-
-#### 软件架构
-本项目基于kotlin语言
+Helium是一个主要基于Kotlin的扩展库，主要分两部分：扩展函数、自定义组件集合。
 
 
-#### 安装教程
+## 使用
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+添加jitpack到您的仓库配置中。
+```
+repositories {
+	maven { url 'https://jitpack.io' }
+}
+```
 
-#### 使用说明
+添加依赖，替换下面`last-version`位最新的版本，当前最新的版本:[![](https://jitpack.io/v/wonium-ethan/Helium.svg)](https://jitpack.io/#wonium-ethan/Helium)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```
+dependencies {
 
-#### 参与贡献
+	implementation 'com.github.wonium-ethan:Helium:last-version'
+}
+```
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+## LICENSE
 
+```text
+Copyright 2018-2020 Ethan,Sollyu
 
-#### 码云特技
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
-=======
-# Helium 
+   http://www.apache.org/licenses/LICENSE-2.0
 
-#### 介绍
-{**以下是Helium说明**
-Helium 是一个基于Kotlin的扩展库
-
-码云是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
-
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

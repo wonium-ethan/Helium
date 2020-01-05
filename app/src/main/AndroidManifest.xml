@@ -25,6 +25,7 @@
         <activity android:name=".ItemViewActivity"/>
         <activity android:name=".SlidingButtonActivity"/>
         <activity android:name=".ui.activity.ColorFulLineActivity"/>
+        <activity android:name=".ui.activity.EditActivity"/>
     </application>
 
 </manifest>

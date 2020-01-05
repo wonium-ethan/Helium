@@ -26,7 +26,7 @@ dependencies {
 ## LICENSE
 
 ```text
-Copyright 2018-2019 Sollyu, Wonium
+Copyright 2018-2020 Ethan,Sollyu
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

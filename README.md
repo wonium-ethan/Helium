@@ -16,7 +16,6 @@ Helium是基于kotlin语言整理的组件，工具等代码库。目的是为�
 1.  添加依赖到你的根Build.gradle仓库
 	allprojects {
 		repositories {
-			...
 			maven { url 'https://jitpack.io' }
 		}
 	}

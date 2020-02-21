@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidWidgetExtensions</string>
+    <string name="gp_skip_text">Skip</string>
 </resources>

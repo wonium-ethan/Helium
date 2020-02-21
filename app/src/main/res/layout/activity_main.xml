@@ -68,7 +68,7 @@
         android:textAllCaps="false" />
 
 
-    <com.helium.android.HwLoadingView
+    <com.helium.android.ELoadingView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:hlv_color="@color/darkGray"

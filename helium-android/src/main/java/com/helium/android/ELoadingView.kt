@@ -15,7 +15,7 @@ import cn.maizz.kotlin.extension.android.content.dp2px
 
 /**
  * @ClassName:
- * @Description:
+ * @Description: https://www.jianshu.com/p/4732d8ae61fe
  * @Author: Ethan
  * @E-mail: wonium@qq.com
  * @Blog: https://blog.wonium.com
@@ -25,7 +25,7 @@ import cn.maizz.kotlin.extension.android.content.dp2px
  * @UpdateDescription: 更新说明
  * @Version: 1.0.0
  */
-class HwLoadingView : View {
+class ELoadingView : View {
 
 
     companion object {
@@ -60,14 +60,14 @@ class HwLoadingView : View {
      * 初始化属性
      */
     private fun initAttrs(context: Context, attr: AttributeSet?) {
-        val ta:TypedArray = context.obtainStyledAttributes(attr, R.styleable.HwLoadingView)
-        mSize = ta.getDimension(R.styleable.HwLoadingView_hlv_size, context.dp2px(dpValue = 90).toFloat()).toInt()
+        val ta:TypedArray = context.obtainStyledAttributes(attr, R.styleable.ELoadingView)
+        mSize = ta.getDimension(R.styleable.ELoadingView_hlv_size, context.dp2px(dpValue = 90).toFloat()).toInt()
         setSize(mSize)
 
-        mColor = ta.getColor(R.styleable.HwLoadingView_hlv_color, Color.parseColor("#a9a9a9"))
+        mColor = ta.getColor(R.styleable.ELoadingView_hlv_color, Color.parseColor("#a9a9a9"))
         setColor(mColor)
 
-        mDuration = ta.getInt(R.styleable.HwLoadingView_hlv_duration, 2500).toLong()
+        mDuration = ta.getInt(R.styleable.ELoadingView_hlv_duration, 2500).toLong()
 
         ta.recycle()
 

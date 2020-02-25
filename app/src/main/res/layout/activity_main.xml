@@ -73,4 +73,19 @@
         android:layout_height="wrap_content"
         app:hlv_color="@color/darkGray"
         app:hlv_size="90dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAppCache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.qmuiteam.qmui.layout.QMUIButton
+        android:id="@+id/btnCleanCache"
+        android:text="清除缓存"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
 </LinearLayout>

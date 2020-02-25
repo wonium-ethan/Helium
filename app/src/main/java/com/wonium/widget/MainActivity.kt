@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import com.helium.android.NoticeView
+import com.helium.helper.CleanCacheHelper
 import com.wonium.widget.ui.activity.ColorFulLineActivity
 import com.wonium.widget.ui.activity.EditActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,6 +27,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(baseContext, ColorFulLineActivity::class.java))
         }
         btnEdit.setOnClickListener { startActivity(Intent(baseContext, EditActivity::class.java)) }
+        tvAppCache.text =CleanCacheHelper.getTotalCacheSize(baseContext)
+        btnCleanCache.setOnClickListener{
+            CleanCacheHelper.clearAllCache(baseContext)
+            tvAppCache.text =CleanCacheHelper.getTotalCacheSize(baseContext)
+        }
+
     }
 
     private fun showNoticeView() {

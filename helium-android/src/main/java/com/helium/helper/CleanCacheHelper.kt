@@ -70,7 +70,7 @@ class CleanCacheHelper {
          * @param context
          */
 
-        public fun cleanInternalCache(context: Context) {
+        private fun cleanInternalCache(context: Context) {
             deleteDir(context.cacheDir)
         }
 
@@ -80,7 +80,7 @@ class CleanCacheHelper {
          */
 
         @SuppressLint("SdCardPath")
-        public fun cleanDataBases(context: Context) {
+        private fun cleanDataBases(context: Context) {
             deleteDir(File("/data/data/".plus(context.packageName).plus("/databases")))
         }
 
@@ -91,7 +91,7 @@ class CleanCacheHelper {
          */
 
         @SuppressLint("SdCardPath")
-        public fun cleanSharedPreference(context: Context) {
+        private fun cleanSharedPreference(context: Context) {
             deleteDir(File("/data/data/".plus(context.packageName).plus("/shared_prefs")))
         }
 
@@ -144,6 +144,10 @@ class CleanCacheHelper {
             return dir.delete()
         }
 
+        /**
+         * 获取文件夹的大小
+         * @param file 文件夹
+         */
         public fun getFolderSize(file: File): Long {
             var size: Long = 0
             try {
@@ -161,7 +165,6 @@ class CleanCacheHelper {
             }
             return size
         }
-
 
         /**
          * 格式化单位大小

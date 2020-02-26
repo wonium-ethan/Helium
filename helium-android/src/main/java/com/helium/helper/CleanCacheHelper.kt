@@ -7,7 +7,7 @@ import java.io.File
 import java.math.BigDecimal
 
 /**
- * @ClassName:
+ * @ClassName: CleanCacheHelper
  * @Description: https://blog.csdn.net/weixin_33938733/article/details/91902990
  * @Author: Ethan
  * @E-mail: wonium@qq.com
@@ -23,8 +23,7 @@ class CleanCacheHelper {
     companion object {
 
         /**
-         * * 清除本应用所有的数据 * *
-         *
+         * 清除本应用所有的数据
          * @param context 上下文
          * @param filePath 文件路径
          */
@@ -67,8 +66,7 @@ class CleanCacheHelper {
 
 
         /**
-         * * 清除本应用内部缓存(/data/data/com.xxx.xxx/cache) * *
-         *
+         * 清除本应用内部缓存(/data/data/com.xxx.xxx/cache)
          * @param context
          */
 
@@ -77,8 +75,7 @@ class CleanCacheHelper {
         }
 
         /**
-         * * 清除本应用所有数据库(/data/data/com.xxx.xxx/databases) * *
-         *
+         * 清除本应用所有数据库(/data/data/com.xxx.xxx/databases)
          * @param context
          */
 
@@ -89,8 +86,7 @@ class CleanCacheHelper {
 
 
         /**
-         * * 清除本应用SharedPreference(/data/data/com.xxx.xxx/shared_prefs) *
-         *
+         * 清除本应用SharedPreference(/data/data/com.xxx.xxx/shared_prefs)
          * @param context 上下文
          */
 
@@ -101,8 +97,7 @@ class CleanCacheHelper {
 
 
         /**
-         * * 按名字清除本应用数据库 * *
-         *
+         * * 按名字清除本应用数据库
          * @param context 上下文
          * @param dbName 数据库名字
          */
@@ -111,20 +106,16 @@ class CleanCacheHelper {
             context.deleteDatabase(dbName)
         }
 
-
         /**
-         * * 清除/data/data/com.xxx.xxx/files下的内容 * *
-         *
+         * 清除/data/data/com.xxx.xxx/files下的内容
          * @param context
          */
         public fun cleanFiles(context: Context) {
             deleteDir(context.filesDir)
         }
 
-
         /**
-         * * 清除外部cache下的内容(/mnt/sdcard/android/data/com.xxx.xxx/cache)
-         *
+         * 清除外部cache下的内容(/mnt/sdcard/android/data/com.xxx.xxx/cache)
          * @param context 上下文关系
          */
 
@@ -199,9 +190,6 @@ class CleanCacheHelper {
             }
             val result = BigDecimal(teraBytes)
             return result.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString().plus("TB")
-
         }
     }
-
-
 }

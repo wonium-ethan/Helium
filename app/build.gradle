@@ -14,7 +14,8 @@ android {
         multiDexEnabled true
         setProperty('archivesBaseName', "$applicationId-official-$versionName-$versionCode-" + (new Date()).format('yyyyMMdd'))
         kapt.arguments { arg("AROUTER_MODULE_NAME", project.getName()) }
-
+        buildConfigField 'String', 'BUILD_TIME', '"' + (new Date()).format('yyyy-MM-dd HH:mm:ss') + '"'
+        buildConfigField 'String', 'BUILD_URL_API', '"http://116.62.137.20:8081"'
     }
     signingConfigs {
         debug {
@@ -90,6 +91,9 @@ dependencies {
     implementation 'com.qmuiteam:qmui:1.4.0'
     implementation 'com.qmuiteam:arch:0.6.1'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.2'
+    // Logger
+    implementation 'org.slf4j:slf4j-android:1.7.28'
+
 
 }
 

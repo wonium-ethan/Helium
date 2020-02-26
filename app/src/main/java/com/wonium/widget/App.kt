@@ -4,10 +4,12 @@ import android.app.Application
 import android.content.Context
 import com.qmuiteam.qmui.arch.QMUISwipeBackActivityManager
 import com.wonium.widget.config.Constants
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 /**
  * @ClassName:
- * @Description: 开启ADB页面
+ * @Description:
  * @Author: fxhhq
  * @E-mail: wonium@qq.com
  * @Blog: https://blog.wonium.com
@@ -26,11 +28,26 @@ class App : Application() {
     init {
         Instance =this
     }
+
+    private val logger: Logger = LoggerFactory.getLogger(this.javaClass)
+
     val sharedPreferences:SharedPreferences by lazy { SharedPreferences(Instance) }
 
     override fun onCreate() {
         super.onCreate()
         QMUISwipeBackActivityManager.init(this)
+
+        logger.error("LOG:Application:onCreate =================================================================================")
+        logger.debug("LOG:Application:onCreate content=debug !!! this log should remove !!!")
+        logger.trace("LOG:Application:onCreate content=trace !!! this log should remove !!!")
+        logger.info("LOG:Application:onCreate content=info  !!! this log should remove !!!")
+        logger.warn("LOG:Application:onCreate content=warn  !!! this log should remove !!!")
+        logger.error("LOG:Application:onCreate content=error !!! this log should remove !!!")
+        logger.info("LOG:Application:onCreate apk build time={}", BuildConfig.BUILD_TIME)
+//        logger.info("LOG:Application:onCreate remoteServerHost={}", Instance.sharedPreferences.remoteServerHost)
+        logger.error("LOG:Application:onCreate =================================================================================")
+
+
     }
 
     @Suppress(names = ["DEPRECATION"])

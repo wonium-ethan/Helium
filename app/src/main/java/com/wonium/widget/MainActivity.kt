@@ -1,11 +1,13 @@
 package com.wonium.widget
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import com.helium.android.NoticeView
 import com.helium.helper.CleanCacheHelper
+import com.helium.helper.isLight
 import com.wonium.widget.ui.activity.ColorFulLineActivity
 import com.wonium.widget.ui.activity.EditActivity
 import kotlinx.android.synthetic.main.activity_main.*

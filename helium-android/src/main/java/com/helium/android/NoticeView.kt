@@ -1,11 +1,13 @@
 package com.helium.android
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Handler
 import android.view.*
 import android.widget.PopupWindow
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
+import com.helium.helper.isLight
 import kotlinx.android.synthetic.main.layout_notice_view.view.*
 
 /**
@@ -39,6 +41,7 @@ class NoticeView(private val builder: Builder) {
     }
 
     fun showAsDropDown(anchor: View) {
+
         mPopupWindow.showAsDropDown(anchor)
         onDismissView()
     }

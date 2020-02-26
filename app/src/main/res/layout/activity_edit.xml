@@ -21,7 +21,7 @@
             android:paddingRight="16dp"
             android:paddingBottom="16dp">
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Library Name"
@@ -34,7 +34,7 @@
                 app:met_primaryColor="@android:color/black"
                 app:met_singleLineEllipsis="true" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Description"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical">
 
-                <com.helium.java.widget.MaterialEditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/basicEt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Floating Label"
@@ -122,7 +122,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Highlight Floating Label"
@@ -143,7 +143,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Custom Floating Label Text"
@@ -165,7 +165,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/singleLineEllipsisEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Max Characters"
@@ -201,7 +201,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Min Characters"
@@ -214,7 +214,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Min and Max"
@@ -241,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical">
 
-                <com.helium.java.widget.MaterialEditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/bottomTextEt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -292,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical">
 
-                <com.helium.java.widget.MaterialEditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/validationEt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -324,7 +324,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Custom Colors"
@@ -355,7 +355,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Custom Accent Typeface"
@@ -380,7 +380,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Hidden underline"
@@ -401,7 +401,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Clear Button"
@@ -422,7 +422,7 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <com.helium.java.widget.MaterialEditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Material Design Icon"

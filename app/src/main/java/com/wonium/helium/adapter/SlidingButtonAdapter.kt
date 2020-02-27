@@ -1,4 +1,21 @@
-package com.wonium.widget.adapter
+/*
+ *   Copyright (c) 2020. Ethan
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
+
+package com.wonium.helium.adapter
 
 import android.content.Context
 import android.util.Log
@@ -10,14 +27,23 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.helium.android.SlidingButtonView
 import com.helium.android.SlidingButtonView.SlidingButtonListener
-import com.wonium.widget.R
-import com.wonium.widget.adapter.SlidingButtonAdapter.MyViewHolder
-import com.wonium.widget.helper.screenWidth
+import com.wonium.helium.R
+import com.wonium.helium.adapter.SlidingButtonAdapter.MyViewHolder
+import com.wonium.helium.helper.screenWidth
 import java.util.*
 
 /**
- * Created by MJJ on 2015/7/25.
- */
+* @Description:
+* @Author: Ethan
+* @E-mail: wonium@qq.com
+* @Blog: https://blog.wonium.com
+* @CreateDate: 2020/2/26 23:03
+* @UpdateUser: Ethan
+* @UpdateDate:  2020/2/26 23:03
+* @UpdateDescription: 更新说明
+* @Version: 1.0.0
+*/
+
 class SlidingButtonAdapter(private val mContext: Context) : RecyclerView.Adapter<MyViewHolder>(), SlidingButtonListener {
     private val mIDeleteBtnClickListener: SlidingViewClickListener
     private val mDatas: MutableList<String> = ArrayList()

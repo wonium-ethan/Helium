@@ -18,7 +18,7 @@ class ColorfulLine : View {
      * 1:--- 2:|
      */
     var direction: Int = 1
-    val paint: Paint by lazy { Paint() }
+    private val paint: Paint by lazy { Paint() }
 
     constructor(context: Context) : super(context) {
         init(null)

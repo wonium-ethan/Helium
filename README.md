@@ -18,7 +18,6 @@ repositories {
 
 ```
 dependencies {
-
 	implementation 'com.github.wonium-ethan:Helium:last-version'
 }
 ```

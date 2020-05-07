@@ -20,7 +20,7 @@ package com.wonium.helium
 import android.app.Application
 import android.content.Context
 import com.qmuiteam.qmui.arch.QMUISwipeBackActivityManager
-import com.wonium.widget.BuildConfig
+
 import com.wonium.helium.config.Constants
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
